@@ -22,6 +22,12 @@ gulp.task('styles', function () {
     // .pipe(notify({ message: 'Styles task complete' }));
 });
 
+// Scripts
+gulp.task('scripts', function() {
+  gulp.src('js/*.js')
+    .pipe(livereload());
+});
+
 // Livereload
 gulp.task('lreload', function() {
   livereload.reload();
@@ -53,4 +59,5 @@ gulp.task('watch', function(){
     gulp.watch('src/images/**/*', ['images']);
     gulp.watch('dist/images/**/*', ['lreload']);
     gulp.watch('./*.html', ['html']);
+    gulp.watch('js/**/*', ['scripts']);
 });

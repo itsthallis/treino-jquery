@@ -1,7 +1,18 @@
+
 $(document).ready(function(){
 	$("#greetings p:first").css("color", "blue");
 	$("#buttons1 button").css("color", "white");
 });
+
+$(function(){ // Abreviatura para (document).ready function()
+	$("#greetings p").on("mouseleave mouseover", zoom);
+	
+	function zoom (evt){
+		$(this).toggleClass("zoom");
+	}
+
+});
+
 
 $("#buttons1 #botao1").click(function(){
 	$("#greetings p:nth-of-type(2)").css("font-weight", "bold");
@@ -34,4 +45,17 @@ $("#buttons1 #botao6").click(function(){
 		$("#greetings #title span").text(name + "!"); // Valor do input vai no título após clique no botão.
 	}
 	else{}
+});
+
+
+// ---- Row 2 -----------------------------------------------------------------------------------------------
+
+$("#buttons2 #botao1").on("click", function(){
+	var txt = "Olá";
+	alert(txt);
+});
+
+$("#buttons2 #botao2").click(function(){
+	$("#greetings p").eq(1).hide(500);
+	$(this).hide(500)
 });
