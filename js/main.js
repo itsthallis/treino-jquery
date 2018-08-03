@@ -59,3 +59,19 @@ $("#buttons2 #botao2").click(function(){
 	$("#greetings p").eq(1).hide(500);
 	$(this).hide(500)
 });
+
+$("#buttons2 #botao3").click(function(){
+	$("#greetings p:first").fadeOut();
+});
+
+$("#buttons2 #botao4").click(function(){
+	$("#greetings p:first").fadeIn();  // Método fadeIn() só funciona se o elemento estiver oculto, com fadeOut() por exemplo.
+});
+
+$("#buttons2 #botao5").click(function(){
+	$("#greetings").slideUp("2000");
+});
+
+$("#buttons2 #botao6").click(function(){
+	$("#greetings").slideDown("2000");
+});

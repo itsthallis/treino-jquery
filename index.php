@@ -48,6 +48,10 @@
 			<div class="col-md-2"><button id="botao6" class="btn btn-warning btn-block mt-3 mt-md-2">Função 6</button></div>
 		</div>
 	</div>
+		
+	<?php 
+		include "form.php";
+		?>
 
 	<script src="node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<title>Jquery-ui | Draggable</title>
+
+	<style>
+		.mainbox{
+			width: 100%;
+			height: 100vh;
+			background-color: #e7e7e7;
+			position: absolute;
+		}
+
+		.box{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			background-color: #00bcd4;
+			cursor: move;
+		}
+
+		.boxstyle{
+			color: #fff;
+			border-radius: 25px;
+			box-shadow: 3px 3px 10px rgba(147,241,255, 1);
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="mainbox d-flex justify-content-center align-items-center">
+		<div class="box boxstyle d-flex justify-content-center align-items-center">Drag it!</div>
+	</div>
+
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+
+	<script>
+	$(function(){
+			$(".box").draggable({
+			containment: ".mainbox",
+			cursor: "move",
+			snap: ".mainbox"
+		});
+	});
+	</script>
+</body>
+</html>
